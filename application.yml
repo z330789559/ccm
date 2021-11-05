@@ -1,0 +1,26 @@
+server:
+  port: 80
+mongodb:
+  host: 127.0.0.1
+  port: 25081
+  dbname: admin
+  user: admin
+  pwd: 889cdb1efa9aaa7e5ae9ea040002a8e2
+config:
+  nodeAddr: 127.0.0.1
+  wsPort: 10088
+  httpPost: 2300
+  startBlock: 0
+  endBlock: latest
+  quiet: true
+  syncAll: true
+  patch: true
+  patchBlocks: 100
+  bulkSize: 100
+  url: https://www.ztb.im/api/v1/tickers
+  settings:
+    poweredbyCustom: false
+    poweredbyEtc: true
+    tokenList: tokens.json
+    useRichList: true
+    useFiat: true

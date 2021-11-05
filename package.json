@@ -1,0 +1,74 @@
+{
+  "name": "create-nextjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"node tools/stats.js \" \"node tools/richlist.js \" \"node --max_old_space_size=8192 tools/sync.js \" \"node lib/server.js\"",
+    "sync": "concurrently  \"node tools/richlist.js \" \"node --max_old_space_size=12288  tools/sync.js \" ",
+    "async": "node --max_old_space_size=10240 tools/sync.js ",
+    "dev1": "node lib/server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node lib/server.js",
+    "pm": "cross-env NODE_ENV=production pm2 start lib/server.js  --watch -i 4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitcc.io:52021/create/create-nextjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^4.1.3",
+    "async": "^3.2.0",
+    "bignumber.js": "8.1.1",
+    "chart.js": "^2.9.4",
+    "concurrently": "4.1.0",
+    "human-standard-token-abi": "2.0.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.20",
+    "mongoose": "4.13.18",
+    "morgan": "1.9.1",
+    "next": "9.3.5",
+    "node-gyp": "7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-intl": "2.9.0",
+    "rlp": "2.2.3",
+    "styled-components": "^5.2.1",
+    "web3-ccm": "2.0.11",
+    "web3-explorer": "1.0.2"
+  },
+  "devDependencies": {
+    "@zeit/next-less": "^1.0.1",
+    "babel-plugin-import": "^1.13.3",
+    "babel-plugin-styled-components": "^1.11.1",
+    "cross-env": "^7.0.2",
+    "less": "^3.12.2",
+    "null-loader": "^4.0.1"
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      [
+        "babel-plugin-styled-components",
+        {
+          "ssr": true,
+          "displayName": true,
+          "preprocess": false
+        }
+      ],
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "style": true
+        }
+      ]
+    ]
+  }
+}
