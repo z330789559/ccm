@@ -1,6 +1,6 @@
 require('../lib/cfg')
 const _ = require('lodash')
-const Web3 = require('web3-ccm')
+const Web3 = require('web3')
 const web3explorer = require('web3-explorer')
 const asyncL = require('async')
 const BigNumber = require('bignumber.js')

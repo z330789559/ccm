@@ -6,7 +6,7 @@ const BigNumber = require('bignumber.js')
 const _ = require('lodash')
 
 const asyncL = require('async')
-const Web3 = require('web3-ccm')
+const Web3 = require('web3')
 
 const ERC20ABI = require('human-standard-token-abi')
 

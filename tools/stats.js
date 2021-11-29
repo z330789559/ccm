@@ -3,7 +3,7 @@
  * */
 require('../lib/cfg')
 const _ = require('lodash')
-const Web3 = require('web3-ccm')
+const Web3 = require('web3')
 
 const { BlockStat } = require('../lib/serverDB.js')
 

@@ -1,8 +1,8 @@
 require('./lib/cfg')
-const Web3 = require('web3-ccm')
+const Web3 = require('web3')
 const fetch = require('isomorphic-unfetch')
 const http = require('axios')
-const provider = new Web3.providers.WebsocketProvider(`ws://47.106.229.244:10088`)
+const provider = new Web3.providers.WebsocketProvider(`ws://127.0.0.1:9944`)
 const web3 = new Web3(provider)
 const { Market } = require('./lib/serverDB.js')
 const BigNumber = require('bignumber.js')
@@ -114,7 +114,7 @@ const quoteInterval = 10 * 60 * 1000
 
 // //  查询余额0x29f2c9e4caddc0f0ce77c07c3fae3895de10a80e
 http
-  .post(`http://47.106.229.244:10000`, {
+  .post(`http://127.0.0.1:9933`, {
     jsonrpc: '2.0',
     method: 'ccm_call',
     params: [

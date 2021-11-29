@@ -1,0 +1,1 @@
+{"ast":null,"code":"import App from 'next/app';\nimport { withAuthSync } from '../utils/auth';\nimport '../components/main.less';\n\nclass MyApp extends App {}\n\nexport default withAuthSync(MyApp);","map":null,"metadata":{},"sourceType":"module"}

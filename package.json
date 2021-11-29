@@ -9,6 +9,7 @@
     "async": "node --max_old_space_size=10240 tools/sync.js ",
     "dev1": "node lib/server.js",
     "build": "next build",
+    "web_dev":"next dev",
     "start": "cross-env NODE_ENV=production node lib/server.js",
     "pm": "cross-env NODE_ENV=production pm2 start lib/server.js  --watch -i 4"
   },
@@ -38,7 +39,7 @@
     "react-intl": "2.9.0",
     "rlp": "2.2.3",
     "styled-components": "^5.2.1",
-    "web3-ccm": "2.0.11",
+    "web3": "1.6.1",
     "web3-explorer": "1.0.2"
   },
   "devDependencies": {

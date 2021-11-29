@@ -5,6 +5,7 @@ import mongoose from 'mongoose'
 const { Block, Transaction, TokenTransfer, Market } = mongoose.models
 
 Router.get('/home/info', async ({ url }, res) => {
+  console.log("开始查询home")
   const block = await Block.findOne({}).sort({ number: -1 }).limit(1)
   const market = await Market.findOne({})
   const transactionNumber = await Transaction.find({}).count()
@@ -12,9 +13,9 @@ Router.get('/home/info', async ({ url }, res) => {
   const tradeNumber = transactionNumber + tokenTransfer
   return {
     block: block.number,
-    change: market.change,
-    vol: market.vol,
-    last: market.last,
+    change: market?market.change:"",
+    vol: market?market.vol:"",
+    last: market?market.last:"",
     tradeNumber
   }
 })

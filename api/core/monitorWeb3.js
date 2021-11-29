@@ -1,4 +1,4 @@
-import Web3 from 'web3-ccm'
+import Web3 from 'web3'
 
 const config = process.cfg.config
 

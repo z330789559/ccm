@@ -6,7 +6,7 @@ const BigNumber = require('bignumber.js')
 const _ = require('lodash')
 
 const asyncL = require('async')
-const Web3 = require('web3-ccm')
+const Web3 = require('web3')
 
 const ERC20ABI = require('human-standard-token-abi')
 
@@ -110,7 +110,7 @@ var writeBlockToDB = async function (config, blockData, flush) {
         },
         body: JSON.stringify({
           jsonrpc: '2.0',
-          method: 'ccm_getSigner',
+          method: 'eth_getSigner',
           params: [item.hash],
           id: 1
         })

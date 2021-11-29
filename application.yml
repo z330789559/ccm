@@ -8,8 +8,8 @@ mongodb:
   pwd: 889cdb1efa9aaa7e5ae9ea040002a8e2
 config:
   nodeAddr: 127.0.0.1
-  wsPort: 10088
-  httpPost: 2300
+  wsPort: 9944
+  httpPost: 9933
   startBlock: 0
   endBlock: latest
   quiet: true

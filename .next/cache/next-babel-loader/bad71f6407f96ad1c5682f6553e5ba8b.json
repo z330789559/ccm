@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class AuthError extends Error {}\nexport class PermissionDeniedError extends Error {}\nexport class RouterNotFoundError extends Error {}\nexport default class BizError extends Error {}","map":null,"metadata":{},"sourceType":"module"}
